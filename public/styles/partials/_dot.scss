@@ -1,0 +1,28 @@
+.dot-element {
+  $dotSize: 10px;
+
+  width: $dotSize;
+  height: $dotSize;
+  border-radius: 50%;
+  background: $dots;
+  margin-right: 0.5rem;
+
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.dot-background {
+  background: $main-2 !important;
+}
+
+.dot-container {
+  display: flex;
+  justify-content: center;
+
+  grid-column: 4 / 6;
+  grid-row: 6;
+  z-index: 2;
+}

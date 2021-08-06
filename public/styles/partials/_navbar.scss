@@ -1,0 +1,83 @@
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $padding;
+}
+
+.navbar-options-container {
+  display: flex;
+  align-items: center;
+  margin-left: 8rem;
+
+  & .navbar-input-container, & .navbar-user-container {
+    margin-right: 2rem;
+  }
+}
+
+.navbar-input-container {
+  width: 40rem;
+  border-bottom: 1px solid $main-1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+
+  .navbar-input {
+    border: none;
+    outline: none;
+    width: 95%;
+  }
+}
+
+.navbar-img {
+
+  height: 41px;
+
+  .navbar-logo {
+    fill: black;
+  }
+}
+
+.navbar-user-container {
+  display: flex;
+  align-items: center;
+
+  i {
+    margin-right: 7px;
+    color: $main-1;
+  }
+}
+
+.navbar-cart-container {
+  display: flex;
+
+  $badgeSize: 1rem;
+
+  .navbar-cart-number {
+    background: $main-2;
+    border-radius: 50%;
+    width: $badgeSize;
+    height: $badgeSize;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 0.3rem;
+
+    span {
+      text-align: center;
+      font-size: 10px;
+      color: #FFF;
+      font-weight: 700;
+    }
+  }
+}
+
+.navbar-user-text {
+  color: $main-1;
+}
+
+.navbar-ico-size {
+  height: $icoSize;
+}
