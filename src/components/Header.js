@@ -10,10 +10,10 @@ export const Header = () => {
           <h1>Crear o migrar tu comercio electrónico?</h1>
         </div>
         <div className="dot-container">
-          <Dots initState={true} />
-          <Dots initState={false}/>
-          <Dots initState={false}/>
-          <Dots initState={false}/>
+          <Dots initState={true}/>
+          <Dots />
+          <Dots />
+          <Dots />
         </div>
       </div>
     </section>
