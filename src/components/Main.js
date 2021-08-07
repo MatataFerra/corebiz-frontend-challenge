@@ -5,16 +5,12 @@ import { Card } from './Card';
 export const Main = () => {
 
   const [products, setProducts] = useState([])
-
-  useEffect(() => {
-    return async ()=> {
-      const url = 'https://corebiz-test.herokuapp.com/api/v1/products';
-      const data = await fetchToApi(url);
-
-      setProducts(data)
-    }
-  }, [])
   
+  useEffect(() => {
+
+    const url = 'https://corebiz-test.herokuapp.com/api/v1/products';
+    fetchToApi(url).then(data => setProducts(data))
+  }, [])
 
   const last = products[products.length - 1]
 
