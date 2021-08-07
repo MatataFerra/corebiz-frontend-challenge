@@ -9,13 +9,13 @@ export const Header = () => {
           <h2>¡Hola! ¿Qué es lo que buscas?</h2>
           <h1>Crear o migrar tu comercio electrónico?</h1>
         </div>
-        <div className="dot-container">
+      </div>
+      <div className="dot-container">
           <Dots initState={true}/>
           <Dots />
           <Dots />
           <Dots />
         </div>
-      </div>
     </section>
   )
 }

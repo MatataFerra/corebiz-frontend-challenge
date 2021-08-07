@@ -5,7 +5,7 @@
   height: $dotSize;
   border-radius: 50%;
   background: $dots;
-  margin-right: 0.5rem;
+  margin-right: 0.8rem;
 
   cursor: pointer;
 
@@ -22,7 +22,9 @@
   display: flex;
   justify-content: center;
 
-  grid-column: 4 / 6;
-  grid-row: 6;
-  z-index: 2;
+  grid-column: 1 / span 10;
+  grid-row: 8;
+  z-index: 19;
+
+  align-self: center;
 }
