@@ -2,6 +2,7 @@
 @import './partials/navbar';
 @import './partials/header';
 @import './partials/dot';
+@import './partials/main';
 
 * {
   margin: 0;
@@ -11,4 +12,8 @@
 
 body {
   font-family: $mainFontFamily;
+}
+
+.relative {
+  position: relative;
 }
