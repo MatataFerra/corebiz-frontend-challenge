@@ -19,4 +19,5 @@ export const App = () => {
 
 // TODO: Validación de formulario
 // TODO: Número de puntuación
+// TODO: Medalla que aumenta número al hacer click en comprar
 

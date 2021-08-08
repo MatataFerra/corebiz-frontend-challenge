@@ -20,7 +20,7 @@ export const Card = ({img, title, listPrice, price, installments, styleCard }) =
       style={style}
     >
       <img className="main-gallery-image" src={img} alt="Product-1" />
-      <div className="main-gallery-off"></div>
+      { !!listPrice && <div className="main-gallery-off"></div>}
       <div className="main-gallery-product-description">
         <p className="main-gallery-title">{title}</p>
         <div className="main-gallery-star-container">

@@ -5,8 +5,8 @@ export const Footer = () => {
     <div className="footer-container">
       <div className="footer-contact-container">
         <h3>Ubicación</h3>
-        <div>-------</div>
-        <ul>
+        <div className="footer-bar"></div>
+        <ul className="footer-information">
           <li>Avenida Andrômeda, 2000. Bloco 6 e 8</li>
           <li>Alphavile SP</li>
           <li>brasil@corebiz.ag</li>
@@ -22,7 +22,7 @@ export const Footer = () => {
 
         <div className="footer-button">
           <img src="/assets/headset.svg" alt="Headset" />
-          <p>HABLA CON UN CONSULTOR</p>
+          <p className="footer-button-speak">HABLA CON UN CONSULTOR</p>
         </div>
       </div>
 
