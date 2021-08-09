@@ -1,13 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { ShoppingCart } from './ShoppingCart'
 export const Navbar = () => {
-
-  const [show, setShow] = useState(true)
-
-  const handleHamMenu = () => {
-    setShow(!show)
-  }
-
   return (
     <div className="navbar-container">
       <img className="navbar-img" src="/assets/corebiz-logo.svg" alt="Corebiz" />
