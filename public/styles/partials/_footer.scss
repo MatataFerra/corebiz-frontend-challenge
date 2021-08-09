@@ -101,3 +101,37 @@
     height: 30px;
   }
 }
+
+@media screen and (max-width: $tablet-600) {
+  .footer-container {
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  .footer-contact-container  {
+    width: 100%;
+  }
+
+  .footer-information li {
+    font-size: 15px;
+  }
+
+  .footer-buttons-container {
+    margin: 27px auto;
+  }
+
+  .footer-button {
+    width: 264px;
+    height: 51px;
+  }
+
+  .footer-partners-container {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer-container {
+    padding: 0.7rem;
+  }
+}

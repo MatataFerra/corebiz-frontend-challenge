@@ -1,10 +1,10 @@
 .main-container {
   padding: 2rem;
-  width: 80%;
   margin: 0 auto;
 }
 
 .main-text-container {
+  margin-bottom: 20px;
   h3 {
     font-weight: 900;
     font-size: 20px;
@@ -16,10 +16,18 @@
   }
 }
 
-.main-products-gallery {
+.main-gallery {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.main-gallery-carousel {
+  display: flex;
   align-items: center;
+  margin: 0 auto;
 }
 
 .main-gallery-card {
@@ -55,7 +63,7 @@
   width: 215px;
   margin-right: 35px;
 
-  &:nth-child(4) {
+  &:last-child {
     margin-right: 0;
   }
 }
@@ -96,7 +104,6 @@
   padding: 0.5rem;
 
 }
-
 
 .main-gallery-title {
   font-size: 12px;
@@ -153,5 +160,90 @@
 
   &:hover {
     background: lighten($color: #000, $amount: 20)
+  }
+}
+
+.main-dots {
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+}
+
+@media screen and (max-width: $desktop) {
+
+  .main-gallery-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 1rem;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .main-gallery-product {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: $tablet-768) {
+  .main-gallery-arrow {
+
+    $marginArrow: 0rem;
+  
+    &--left {
+      margin-right: $marginArrow;
+    }
+  
+    &--right {
+      margin-left: $marginArrow;
+    }
+  }
+
+  .main-gallery-product:nth-child(2n+3) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $tablet-600) {
+  .main-gallery-product:nth-child(1n+3) {
+    display: none;
+  }
+
+  .main-dots {
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: $phone-480) {
+  .main-gallery-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .main-gallery-product {
+    width: 190px;
+  }
+
+  .main-gallery-arrow {
+  
+    &--left {
+      display: none;
+    }
+  
+    &--right {
+      display: none;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: $phone-384) {
+  .main-gallery-product {
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .main-gallery-card {
+    grid-template-columns: 1fr;
   }
 }

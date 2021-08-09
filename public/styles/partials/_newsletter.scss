@@ -39,3 +39,39 @@
   font-family: $secondFontFamily;
   width: 140px;
 }
+
+@media screen and (max-width: $tablet-600) {
+  .newsletter-container {
+    height: 100%;
+    h2 {
+      font-size: 27px;
+      margin-left: 3rem;
+      margin-top: 14px
+    }
+  }
+
+  .newsletter-form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .newsletter-input {
+    margin-bottom: 18px;
+    width: 374px;
+    margin-right: 0;
+  }
+
+  .newsletter-button {
+    margin-bottom: 18px;
+    width: 374px;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .newsletter-input, .newsletter-button {
+    width: unset;
+  }
+}

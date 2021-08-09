@@ -1,8 +1,8 @@
-import React from 'react'
-import Swal from 'sweetalert2'
-import { postToApi } from '../helpers/fetchToApi'
-import { checkRegexp, emailRegexp } from '../helpers/regexp'
-import { useForm } from '../hooks/useForm'
+import React from 'react';
+import Swal from 'sweetalert2';
+import { postToApi } from '../helpers/fetchToApi';
+import { checkRegexp, emailRegexp } from '../helpers/regexp';
+import { useForm } from '../hooks/useForm';
 
 export const Newsletter = () => {
 

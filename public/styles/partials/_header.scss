@@ -32,3 +32,42 @@
 .header-titles {
   margin-left: 10rem;
 }
+
+@media screen and (max-width: $tablet-768) {
+  .header-container {
+    grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+  }
+  .header-titles {
+    margin: 0;
+  }
+
+  .header-title-container {
+    grid-column: 2 / 9;
+    grid-row: 3 / 6;
+  }
+}
+
+
+@media screen and (max-width: $phone-480) {
+
+  .header-title-container {
+    grid-column: 1 / 8;
+    grid-row: 3 / 6;
+    margin: 1rem;
+  }
+
+  .header-titles {
+    h2 {
+      font-size: 24pt;
+    }
+    h1 {
+      font-size: 32pt;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header-container {
+    align-items: center;
+  }
+}

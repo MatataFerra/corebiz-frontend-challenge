@@ -4,7 +4,7 @@ import { addProductToCart } from '../actions/shopping'
 import { CartContext } from '../CartContext'
 import { StarsRating } from './StarsRating'
 
-export const Card = ({img, title, listPrice, price, installments, styleCard, stars, id }) => {
+export const Card = ({img, title, listPrice, price, installments, stars, id }) => {
 
   const [button, setButton] = useState(false)
   const { dispatch, state } = useContext(CartContext)
@@ -21,13 +21,11 @@ export const Card = ({img, title, listPrice, price, installments, styleCard, sta
     setButton(false)
   }
 
-  const style = styleCard ? {display: 'none'} : {display: 'block'}
 
   return (
     <div className={(!!listPrice) ? 'main-gallery-product relative' : 'main-gallery-product'} 
       onMouseEnter={handleButtonVisibility}
       onMouseLeave={handleButtonHide}
-      style={style}
     >
       <img className="main-gallery-image" src={img} alt="Product-1" />
       { !!listPrice && <div className="main-gallery-off"></div>}
