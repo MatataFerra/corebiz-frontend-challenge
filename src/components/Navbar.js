@@ -1,6 +1,13 @@
 import React from 'react'
 
+import { ShoppingCart } from './ShoppingCart'
+
+
+
 export const Navbar = () => {
+
+
+
   return (
     <div className="navbar-container">
       <img className="navbar-img" src="/assets/corebiz-logo.svg" alt="" />
@@ -20,7 +27,7 @@ export const Navbar = () => {
           <div>
             <img className="navbar-cart navbar-ico-size" src="/assets/carrito-de-compras.svg" alt="Compras" />
           </div>
-          <div className="navbar-cart-number"><span>1</span></div>
+          <ShoppingCart />
         </div>
       </div>
     

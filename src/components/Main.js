@@ -5,9 +5,8 @@ import { Card } from './Card';
 export const Main = () => {
 
   const [products, setProducts] = useState([])
-  
-  useEffect(() => {
 
+  useEffect(() => {
     const url = 'https://corebiz-test.herokuapp.com/api/v1/products';
     fetchToApi(url).then(data => setProducts(data))
   }, [])
@@ -34,6 +33,8 @@ export const Main = () => {
                 installments={product.installments}
                 key={product.productId}
                 styleCard={last.productId === product.productId ? true : false}
+                stars={product.stars}
+                id={product.productId}
 
               />
             )

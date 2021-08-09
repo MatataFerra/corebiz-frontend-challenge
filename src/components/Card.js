@@ -1,7 +1,20 @@
 import React, { useState } from 'react'
+import { useContext } from 'react'
+import { addProductToCart } from '../actions/shopping'
+import { CartContext } from '../CartContext'
+import { StarsRating } from './StarsRating'
 
-export const Card = ({img, title, listPrice, price, installments, styleCard }) => {
+
+export const Card = ({img, title, listPrice, price, installments, styleCard, stars, id }) => {
+
   const [button, setButton] = useState(false)
+
+
+  const { dispatch } = useContext(CartContext)
+
+  const handleAddTocart = () => {
+    dispatch( addProductToCart(1) )
+  }
 
   const handleButtonVisibility = () => {
     setButton(true)
@@ -23,13 +36,7 @@ export const Card = ({img, title, listPrice, price, installments, styleCard }) =
       { !!listPrice && <div className="main-gallery-off"></div>}
       <div className="main-gallery-product-description">
         <p className="main-gallery-title">{title}</p>
-        <div className="main-gallery-star-container">
-          <i className="main-star far fa-star"></i>
-          <i className="main-star far fa-star"></i>
-          <i className="main-star far fa-star"></i>
-          <i className="main-star far fa-star"></i>
-          <i className="main-star far fa-star"></i>
-        </div>
+        <StarsRating stars={stars} id={id}/>
         <p className="main-gallery-listprice">{(!!listPrice) ? `de $ ${listPrice}` : '--'}</p>
         <p className="main-gallery-price">{price}</p>
         <p className="main-gallery-installment">
@@ -41,7 +48,7 @@ export const Card = ({img, title, listPrice, price, installments, styleCard }) =
         </p>
         {
           (button)
-          ? <div style={{visibility: 'visible'}} className="main-gallery-button">Comprar</div>
+          ? <div onClick={handleAddTocart} style={{visibility: 'visible'}} className="main-gallery-button">Comprar</div>
           : <div style={{visibility: 'hidden'}} className="main-gallery-button">Comprar</div>
         }
           
