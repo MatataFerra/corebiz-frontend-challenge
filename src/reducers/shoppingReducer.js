@@ -12,8 +12,7 @@ export const shoppingReducer = (state = initialState, action) => {
         ...state,
         cart: state.cart + action.payload
       }
-      
-  
+
     default:
       return state;
   }

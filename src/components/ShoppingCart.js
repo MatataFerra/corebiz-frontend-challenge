@@ -1,10 +1,16 @@
-import React, { useContext } from 'react'
-import { CartContext } from '../CartContext'
+import React from 'react'
+
 
 export const ShoppingCart = () => {
-  const { state } = useContext(CartContext)
+  const inCart = JSON.parse(localStorage.getItem('cart'));
 
   return (
-    <div className="navbar-cart-number"><span>{ state.cart }</span></div>
+    <div className="navbar-cart-number">
+      {
+        inCart
+        ? <span>{ inCart }</span>
+        : <span> 0 </span>
+      }
+    </div>
   )
 }

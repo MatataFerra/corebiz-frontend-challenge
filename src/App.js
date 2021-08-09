@@ -6,15 +6,19 @@ import { Navbar } from './components/Navbar';
 import { Newsletter } from './components/Newsletter';
 import { initialState, shoppingReducer } from './reducers/shoppingReducer';
 import { CartContext } from './CartContext';
-import { starReducer, initialStarState } from './reducers/starReducer';
 
 export const App = () => {
   
   const [state, dispatch] = useReducer(shoppingReducer, initialState)
-  const [stars] = useReducer(starReducer, initialStarState)
+
+  // const sessionCart = JSON.parse(localStorage.getItem('cart'));
+
+  // if( !sessionCart ) {
+  //   return localStorage.setItem('cart', JSON.stringify(state.cart));
+  // }
 
   return (
-    <CartContext.Provider value={{state, dispatch, stars}}>
+    <CartContext.Provider value={{state, dispatch}}>
       <div>
         <Navbar />
         <Header />

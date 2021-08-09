@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useContext } from 'react'
 import { addProductToCart } from '../actions/shopping'
 import { CartContext } from '../CartContext'
@@ -8,12 +8,11 @@ import { StarsRating } from './StarsRating'
 export const Card = ({img, title, listPrice, price, installments, styleCard, stars, id }) => {
 
   const [button, setButton] = useState(false)
+  const { dispatch, state } = useContext(CartContext)
 
-
-  const { dispatch } = useContext(CartContext)
 
   const handleAddTocart = () => {
-    dispatch( addProductToCart(1) )
+    dispatch( addProductToCart(state, 1) )
   }
 
   const handleButtonVisibility = () => {
@@ -38,7 +37,7 @@ export const Card = ({img, title, listPrice, price, installments, styleCard, sta
         <p className="main-gallery-title">{title}</p>
         <StarsRating stars={stars} id={id}/>
         <p className="main-gallery-listprice">{(!!listPrice) ? `de $ ${listPrice}` : '--'}</p>
-        <p className="main-gallery-price">{price}</p>
+        <p className="main-gallery-price"> por ${price}</p>
         <p className="main-gallery-installment">
           {
             (installments.length === 0) 
