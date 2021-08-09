@@ -36,7 +36,6 @@ export const Footer = () => {
           <p>Powered by</p>
           <img src="assets/vtex-1.svg" alt="Corebiz white" />
         </div>
-
       </div>
     </div>
   )

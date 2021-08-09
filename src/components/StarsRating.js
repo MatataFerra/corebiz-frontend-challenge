@@ -18,7 +18,7 @@ export const StarsRating = ({stars, id}) => {
           return(
             <i key={id + Math.random()} className={`main-star ${rate} fa-star`}></i>
           )
-        } )
+        })
       }
     </div>
   )

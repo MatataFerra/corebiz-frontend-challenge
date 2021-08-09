@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 export const ShoppingCart = () => {
   const inCart = JSON.parse(localStorage.getItem('cart'));
 

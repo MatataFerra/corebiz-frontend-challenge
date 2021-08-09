@@ -6,7 +6,6 @@ export const howManyStarsForProduct = (stars) => {
     star <= i 
     ? ratingOfProduct.push('far') 
     : ratingOfProduct.push('fas')
-
   }
   return ratingOfProduct
 }

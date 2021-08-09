@@ -3,7 +3,6 @@ import { fetchToApi } from '../helpers/fetchToApi';
 import { Card } from './Card';
 
 export const Main = () => {
-
   const [products, setProducts] = useState([])
 
   useEffect(() => {
@@ -20,7 +19,7 @@ export const Main = () => {
         <div></div>
       </div>
       <div className="main-products-gallery">
-      <i className="main-gallery-arrow--left fas fa-chevron-left"></i>
+        <i className="main-gallery-arrow--left fas fa-chevron-left"></i>
         <div className="main-gallery-card">
           {
             products.map(product => {
@@ -41,10 +40,8 @@ export const Main = () => {
             })
           }
         </div>
-        <i
-          className="main-gallery-arrow--right fas fa-chevron-right"></i>
+        <i className="main-gallery-arrow--right fas fa-chevron-right"></i>
       </div>
-
     </div>
   )
 }
