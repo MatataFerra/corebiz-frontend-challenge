@@ -134,6 +134,33 @@ $badgeSize: 1rem;
   .navbar-user-container  {
     grid-row: 2;
     visibility: hidden;
+    background: $main-2;
+    z-index: 3;
+  }
+}
+
+@media screen and (max-width: $tablet-640) {
+  .navbar-input-container {
+    grid-column: 1 / 4;
+  }
+
+  .navbar-user-container {
+    padding: 0.5rem;
+  }
+
+  .navbar-ico-size {
+    height: 24px;
+  }
+
+  $badgeSize: 1.5rem;
+
+  .navbar-cart-number {
+    width: $badgeSize;
+    height: $badgeSize;
+
+    span {
+      font-size: 15px;
+    }
   }
 }
 
@@ -166,7 +193,7 @@ $badgeSize: 1rem;
   }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: $phone-320){
   .navbar-container {
     padding: 0.3rem;
   }

@@ -102,6 +102,16 @@
   }
 }
 
+@media screen and (max-width: $tablet-640) {
+  .footer-container{
+    flex-wrap: wrap;
+  }
+
+  .footer-contact-container {
+    margin-bottom: 1rem;
+  }
+}
+
 @media screen and (max-width: $tablet-600) {
   .footer-container {
     flex-direction: column;
@@ -130,7 +140,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: $phone-320) {
   .footer-container {
     padding: 0.7rem;
   }

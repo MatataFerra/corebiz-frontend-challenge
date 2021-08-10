@@ -213,6 +213,12 @@
   }
 }
 
+@media screen and (max-width: $tablet-640) {
+  .main-gallery-product:nth-child(1n+3) {
+    display: none;
+  }
+}
+
 @media screen and (max-width: $phone-480) {
   .main-gallery-card {
     grid-template-columns: 1fr 1fr;
@@ -242,7 +248,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: $phone-320) {
   .main-gallery-card {
     grid-template-columns: 1fr;
   }
